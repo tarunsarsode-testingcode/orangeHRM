@@ -9,12 +9,18 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentReporter;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
 import test_util.Testutil;
 
 public class Base_Class {
 
 	public static Properties prop;
 	public static WebDriver driver;
+	public static ExtentReports extent;
+	public static ExtentSparkReporter extentspark;
 	
 	public Base_Class() throws FileNotFoundException
 	{
@@ -40,7 +46,7 @@ public class Base_Class {
 		String browsername = prop.getProperty("Browser_Name");
 		if(browsername.equals("Chrome"))
 		{
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\HOME\\Desktop\\Automation_codes\\democodes\\browser_driver\\chromedriver.exe");	
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\HOME\\Desktop\\Automation_codes\\democodes\\browser_driver\\chromedriver1.exe");	
 			driver = new ChromeDriver();
 		}
 		
@@ -48,7 +54,7 @@ public class Base_Class {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(Testutil.page_load_time, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(Testutil.implicit_wait, TimeUnit.SECONDS);
-		driver.get(prop.getProperty("APP_URL"));
+		/* driver.get(prop.getProperty("APP_URL")); */
 	}
 	
 	public static void Websiteload()
@@ -60,6 +66,17 @@ public class Base_Class {
 	public static void sleep() throws InterruptedException
 	{
 			Thread.sleep(10);	
+	}
+	public static void Extentreport()
+	{
+		extent = new ExtentReports();
+		extentspark = new ExtentSparkReporter("report.html");
+		extent.attachReporter(extentspark);
+	}
+	
+	public static void extentflush()
+	{
+		extent.flush();
 	}
 	
 }

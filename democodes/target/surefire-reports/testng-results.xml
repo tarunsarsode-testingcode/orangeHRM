@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="democodes.Forgetpasswordpage_Test" duration-ms="20431" started-at="2021-07-31T23:41:57 IST" finished-at="2021-07-31T23:42:17 IST">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="20431" started-at="2021-07-31T23:41:57 IST" finished-at="2021-07-31T23:42:17 IST">
+      <class name="democodes.Forgetpasswordpage_Test">
+        <test-method status="PASS" signature="setup()[pri:0, instance:democodes.Forgetpasswordpage_Test@5702b3b1]" name="setup" is-config="true" duration-ms="8545" started-at="2021-07-31T23:41:57 IST" finished-at="2021-07-31T23:42:06 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="verify_Forgetpassword_Test()[pri:1, instance:democodes.Forgetpasswordpage_Test@5702b3b1]" name="verify_Forgetpassword_Test" duration-ms="2196" started-at="2021-07-31T23:42:06 IST" finished-at="2021-07-31T23:42:08 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Forgetpassword_Test -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:democodes.Forgetpasswordpage_Test@5702b3b1]" name="tearDown" is-config="true" duration-ms="862" started-at="2021-07-31T23:42:08 IST" finished-at="2021-07-31T23:42:09 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:democodes.Forgetpasswordpage_Test@5702b3b1]" name="setup" is-config="true" duration-ms="6294" started-at="2021-07-31T23:42:09 IST" finished-at="2021-07-31T23:42:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="verify_cancel()[pri:2, instance:democodes.Forgetpasswordpage_Test@5702b3b1]" name="verify_cancel" duration-ms="1753" started-at="2021-07-31T23:42:15 IST" finished-at="2021-07-31T23:42:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_cancel -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:democodes.Forgetpasswordpage_Test@5702b3b1]" name="tearDown" is-config="true" duration-ms="693" started-at="2021-07-31T23:42:17 IST" finished-at="2021-07-31T23:42:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- democodes.Forgetpasswordpage_Test -->
+    </test> <!-- Command line test -->
+  </suite> <!-- democodes.Forgetpasswordpage_Test -->
+</testng-results>

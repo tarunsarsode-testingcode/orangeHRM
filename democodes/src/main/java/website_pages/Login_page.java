@@ -10,7 +10,8 @@ import base_package.Base_Class;
 
 public class Login_page extends Base_Class {
 	
-	Dashboard_page dashboardpage;
+	public Dashboard_page dashboardpage; 
+	public Forgetpassword_page Forgetpasswordpage;
 	
 	@FindBy (id="txtUsername")
 	WebElement adminusername;
@@ -21,7 +22,7 @@ public class Login_page extends Base_Class {
 	@FindBy (id="btnLogin")
 	WebElement loginbutton;
 	
-	@FindBy (xpath="/html/body/div[1]/div/div[3]/div[2]/div[2]/form/div[5]/div/a")
+	@FindBy (xpath = "/html/body/div[1]/div/div[3]/div[2]/div[2]/form/div[5]/div/a")
 	WebElement forgetpasswordlink;
 	
 	@FindBy (xpath="/html/body/div[1]/div/div[3]/div[1]/img")
@@ -33,6 +34,7 @@ public class Login_page extends Base_Class {
 		
 		PageFactory.initElements(driver, this);
 		dashboardpage = new Dashboard_page();
+		
 	}
 	
 	public String verifyTitle()
@@ -53,8 +55,9 @@ public class Login_page extends Base_Class {
 	}
 	
 
-	public void verifyforgetpasswordlink() {
+	public Forgetpassword_page verifyforgetpasswordlink() throws Exception {
 		forgetpasswordlink.click();
+		return new Forgetpassword_page();
 		
 	}
 	

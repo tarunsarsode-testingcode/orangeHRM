@@ -7,8 +7,11 @@
         <methods>
           <include name="verify_Title"/>
           <include name="Verify_login"/>
+          <include name="initextentreport"/>
+          <include name="verify_forgetpassword_link"/>
           <include name="tearDown"/>
           <include name="setup"/>
+          <include name="flushextent"/>
         </methods>
       </class> <!-- democodes.Login_page_Testcase -->
     </classes>
