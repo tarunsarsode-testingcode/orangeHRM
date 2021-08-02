@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentReporter;
@@ -48,6 +49,15 @@ public class Base_Class {
 		{
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\HOME\\Desktop\\Automation_codes\\democodes\\browser_driver\\chromedriver1.exe");	
 			driver = new ChromeDriver();
+		}
+		else if(browsername.equals("FF"))
+		{
+			System.setProperty("webdriver.gecko.driver", "C:\\Users\\HOME\\Desktop\\Automation_codes\\democodes\\browser_driver\\geckodriver.exe");
+			driver = new FirefoxDriver();
+		}
+		else if (browsername.equals("Edge"))
+		{
+			System.setProperty("webdriver.edge.driver", "C:\\Users\\HOME\\Desktop\\Automation_codes\\democodes\\browser_driver\\msedgedriver.exe");
 		}
 		
 		driver.manage().window().maximize();
